@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Scientific Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+    <div class="calculator">
+      <!-- Display Screen -->
+      <div class="display-container">
+        <div class="expression-display" id="expression"></div>
+        <div class="main-display" id="display">0</div>
+      </div>
+
+      <!-- Mode Selector -->
+      <div class="mode-bar">
+        <button class="mode-btn active" id="btn-standard">Standard</button>
+        <button class="mode-btn" id="btn-scientific">Scientific</button>
+        <button class="mode-btn" id="btn-history-toggle">History</button>
+      </div>
+
+      <!-- Scientific Panel -->
+      <div class="scientific-panel hidden" id="scientific-panel">
+        <button class="btn sci-btn" data-action="sin">sin</button>
+        <button class="btn sci-btn" data-action="cos">cos</button>
+        <button class="btn sci-btn" data-action="tan">tan</button>
+        <button class="btn sci-btn" data-action="ln">ln</button>
+
+        <button class="btn sci-btn" data-action="log">log</button>
+        <button class="btn sci-btn" data-action="sqrt">√</button>
+        <button class="btn sci-btn" data-action="pow">x^y</button>
+        <button class="btn sci-btn" data-action="sqr">x²</button>
+
+        <button class="btn sci-btn" data-action="pi">π</button>
+        <button class="btn sci-btn" data-action="e">e</button>
+        <button class="btn sci-btn" data-action="open-paren">(</button>
+        <button class="btn sci-btn" data-action="close-paren">)</button>
+      </div>
+
+      <!-- Keypad Grid -->
+      <div class="keypad">
+        <button class="btn action-btn" data-action="clear">C</button>
+        <button class="btn action-btn" data-action="backspace">⌫</button>
+        <button class="btn operator-btn" data-action="percent">%</button>
+        <button class="btn operator-btn" data-action="divide">÷</button>
+
+        <button class="btn num-btn" data-value="7">7</button>
+        <button class="btn num-btn" data-value="8">8</button>
+        <button class="btn num-btn" data-value="9">9</button>
+        <button class="btn operator-btn" data-action="multiply">×</button>
+
+        <button class="btn num-btn" data-value="4">4</button>
+        <button class="btn num-btn" data-value="5">5</button>
+        <button class="btn num-btn" data-value="6">6</button>
+        <button class="btn operator-btn" data-action="subtract">−</button>
+
+        <button class="btn num-btn" data-value="1">1</button>
+        <button class="btn num-btn" data-value="2">2</button>
+        <button class="btn num-btn" data-value="3">3</button>
+        <button class="btn operator-btn" data-action="add">+</button>
+
+        <button class="btn num-btn" data-action="negate">±</button>
+        <button class="btn num-btn" data-value="0">0</button>
+        <button class="btn num-btn" data-value=".">.</button>
+        <button class="btn equals-btn" data-action="calculate">=</button>
+      </div>
+    </div>
+
+    <!-- History Panel -->
+    <div class="history-panel hidden" id="history-panel">
+      <div class="history-header">
+        <h3>History</h3>
+        <button id="clear-history-btn" class="text-btn">Clear</button>
+      </div>
+      <ul class="history-list" id="history-list">
+        <li class="history-empty">No history yet</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
